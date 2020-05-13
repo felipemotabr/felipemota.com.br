@@ -2,65 +2,92 @@
 layout: default
 ---
 
-<!-- Page Header -->
-{% if page.background %}
-<header class="masthead" style="background-image: url('{{ page.background | prepend: site.baseurl | replace: '//', '/' }}')">
+  <!--begin::Header -->
+  {% if page.background %}
+  <header class="masthead" style="background-image: url('{{ page.background | prepend: site.baseurl | replace: '//', '/' }}')">
+  <div class="overlay"></div>
+  {% elsif page.header-color  %}
+  <header class="masthead" style="background-color: #{{ page.header-color }}">
   {% else %}
   <header class="masthead">
-    {% endif %}
-    <div class="overlay"></div>
+  <div class="overlay"></div>
+  {% endif %}
     <div class="container">
       <div class="row">
         <div class="col-lg-8 col-md-10 mx-auto">
           <div class="page-heading">
-            <h1>{{ site.title }}</h1>
-            {% if site.description %}
-            <span class="subheading">{{ site.description }}</span>
-            {% endif %}
+            <h1>{{ site.header_title }}</h1>
+            <span class="subheading">{{ site.header_description }}</span>
           </div>
         </div>
       </div>
     </div>
   </header>
+  <!--end::Header -->
 
+<!--begin::Recent Post and Work -->
+<div class="recent">
   <div class="container">
     <div class="row">
-      <div class="col-lg-8 col-md-10 mx-auto">
-
-        {{ content }}
-
-        <!-- Home Post List -->
-        {% for post in site.posts limit : 5 %}
-
-        <article class="post-preview">
-          <a href="{{ post.url | prepend: site.baseurl | replace: '//', '/' }}">
-            <h2 class="post-title">{{ post.title }}</h2>
-            {% if post.subtitle %}
-            <h3 class="post-subtitle">{{ post.subtitle }}</h3>
-            {% else %}
-            <h3 class="post-subtitle">{{ post.excerpt | strip_html | truncatewords: 15 }}</h3>
-            {% endif %}
-          </a>
-          <p class="post-meta">Posted by
-            {% if post.author %}
-            {{ post.author }}
-            {% else %}
-            {{ site.author }}
-            {% endif %}
-            on
-            {{ post.date | date: '%B %d, %Y' }} &middot; {% include read_time.html content=post.content %}            
-          </p>
-        </article>
-
-        <hr>
-
-        {% endfor %}
-
-        <!-- Pager -->
-        <div class="clearfix">
-          <a class="btn btn-primary float-right" href="{{"/posts" | relative_url }}">View All Posts &rarr;</a>
+      <div class="col-lg-6">
+        <h5>Recent Post</h5>
+        {% for post in site.posts limit : 1 %}
+        <a href="{{ post.url }}">
+        <div class="recent__content">
+          <div class="recent__title">
+            <h4>{{ post.title }}</h4>
+          </div>
+          <div class="bottom-sec wow fadeIn">
+              {{ post.excerpt | strip_html | truncatewords: 15 }}
+          </div>
         </div>
-
+        </a>
+        {% endfor %}
+      </div>
+      <div class="col-lg-6">
+        <h5>Recent Work</h5>
+        {% for post in site.works limit : 1 %}
+        <a href="{{ post.url }}">
+        <div class="recent__content">
+          <div class="recent__title">
+            <h4>{{ post.title }}</h4>
+          </div>
+            <div class="bottom-sec wow fadeIn">
+              {{ post.excerpt | strip_html | truncatewords: 15 }}
+          </div>
+        </div>
+        </a>
+        {% endfor %}
       </div>
     </div>
   </div>
+</div>
+<!--end::Recent Post and Work -->
+
+  <!-- Page Work -->
+  <div class="work">
+    <div class="container">
+      <div class="row">
+        <div class="col-lg-12">
+          <h2>Work</h2>
+          <p>Lorem Ipsum is simply dummy text of the printing and typesetting industry.</p>
+        </div>
+        {% for preview_work in site.works limit : 5 %}
+        <div class="row work__content">
+          <div class="col-12 col-lg-7">
+            <img src="{{ preview_work.thumbnail }}"class="img-fluid" alt="">
+          </div>
+          <div class="col-12 col-lg-5">
+              <span class="work__tag">{{ preview_work.tag }}</span>
+              <h4 class="work__title">{{ preview_work.title }}</h4>
+              <p class="work__description">{{ preview_work.description }}</p>
+              <a href="{{ preview_work.url | prepend: site.baseurl | replace: '//', '/' }}" class="btn btn-primary">Read more</a>
+          </div>
+        </div>
+        {% endfor %}
+    </div>
+  </div>
+</div>
+
+
+

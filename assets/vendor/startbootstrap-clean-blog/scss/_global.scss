@@ -75,3 +75,73 @@ img::-moz-selection {
   color: $white;
   background: transparent;
 }
+
+
+
+.recent  {
+  a {
+    text-decoration: none;
+  }
+  &__content {
+    background-color: #f5f5ff;
+    padding: 40px 30px;
+    border-radius: 10px;
+    margin-bottom: 30px;
+    -webkit-transition: all .3s ease 0s;
+    -moz-transition: all .3s ease 0s;
+    -o-transition: all .3s ease 0s;
+    transition: all .3s ease 0s;
+      &:hover {
+        background-color: $primary;
+        cursor: pointer;
+        color: #fff;
+      }
+    }
+      
+  &__title {
+    font-size: 21px;
+    font-weight: 700;
+  }
+
+}
+
+.home-heading {
+  padding: 14em 0!important;
+}
+
+.work {
+
+  &__content {
+    margin-bottom: 5em;
+  }
+  &__tag {
+    font-size: 9px;
+    font-weight: 600;
+    white-space: nowrap;
+    text-align: center;
+    vertical-align: middle;
+    letter-spacing: .5px;
+    text-transform: uppercase;
+    width: auto;
+    line-height: 22px;
+    padding: 5px 20px 5px;
+    border-radius: 50px;
+    background: transparent;
+    border: 1px solid #232323;
+    color: #232323;
+    margin: 0;
+  }
+  &__title {
+    font-size: 1.7em;
+    line-height: 1.3em;
+    margin-top: 0.4em;
+    margin-bottom: 0;
+  }
+  &__description {
+      font-size: 0.8em;
+      line-height: 1.8em;
+      margin: 1em 0;
+      color: $gray-700;
+  }
+
+}
