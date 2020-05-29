@@ -1,0 +1,1 @@
+Desenvolvedor de aplicações para a Web desde 2013, especializado em Front-end Developer. Graduado em Publicidade e Propagada, conhecimento em campanhas publicitárias, desenvolvimento de identidade visual, design para sites e mobile, e mais recentemente trabalhando com User Experience (UX) em produtos e serviços.

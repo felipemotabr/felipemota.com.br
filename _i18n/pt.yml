@@ -1,0 +1,35 @@
+header:
+  title : Sou Felipe Mota, e crio coisas para Web.
+  description: Desenvolvedor e Designer especializado em desenvolvimento de aplicações web e mobile
+
+menu:
+  portuguese: Português
+  english: Inglês
+
+recent-section:
+  post: Posts recente
+  work: Trabalho recente
+
+about:
+  title: Sobre
+  description: Sobre
+
+work-section:
+ title: Portfólio
+ description: Alguns trabalhos selecionados.
+ btn: Leia mais
+
+works:
+  title: Portfólio
+  description: Coisas que eu faço por aqui
+
+contact:
+  title: Fale comigo
+  description: Vamos bater um papo?
+
+form: 
+  name: Nome 
+  email: E-mail
+  phone: Telefone
+  message: Mensagem
+  btn: Enviar

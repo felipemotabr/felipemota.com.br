@@ -1,0 +1,12 @@
+- title: Home
+  slug: /
+
+- title: Sobre
+  slug: /about
+
+
+- title: Trabalhos
+  slug: /works
+
+- title: Contato
+  slug: /contact
