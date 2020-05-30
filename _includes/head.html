@@ -18,7 +18,7 @@
   <link rel="stylesheet" href="{{"/assets/vendor/fontawesome-free/css/all.min.css" | prepend: site.baseurl_root }}">
 
   <link rel="stylesheet" href="{{"/assets/main.css" | prepend: site.baseurl_root }}">
-  <link rel="canonical" href="{{ page.url | replace:'index.html','' | absolute_url }}">
+  <link rel="canonical" href="{{ page.url | replace:'index.html','' | prepend: site.baseurl_root }}">
   <link rel="alternate" type="application/rss+xml" title="{{ site.title | escape }}" href="{{ "/feed.xml" | prepend: site.baseurl_root }}">
 
 </head>

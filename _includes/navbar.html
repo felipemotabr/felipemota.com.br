@@ -27,13 +27,13 @@
         {% if site.lang == "en" %}
           {% for link in site.data.menu_en %}
           <li class="nav-item">
-            <a class="nav-link" href="{{ link.slug | absolute_url }}">{{ link.title }}</a>
+            <a class="nav-link" href="{{ link.slug | prepend: site.baseurl_root }}">{{ link.title }}</a>
           </li>
           {% endfor %} 
         {% elsif site.lang == "pt" %}
           {% for link in site.data.menu_pt %}
           <li class="nav-item">
-            <a class="nav-link" href="{{ link.slug | absolute_url }}">{{ link.title }}</a>
+            <a class="nav-link" href="{{ link.slug | prepend: site.baseurl_root }}">{{ link.title }}</a>
           </li>
           {% endfor %}
         {% endif %}

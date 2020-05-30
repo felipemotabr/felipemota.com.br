@@ -3,7 +3,7 @@ email:              felipemotacontato@gmail.com
 description:        Felipe Mota Website
 author:             Felipe Mota
 baseurl:            ""
-url:                "https://blackrockdigital.github.io"
+# url:                "https://felipemota.com.br"
 
 # Header
 header-color:       ff0094
