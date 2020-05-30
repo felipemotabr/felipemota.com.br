@@ -5,6 +5,14 @@ admin_path: ''
 webhook_url: 
 sections:
 - type: directory
+  path: _works
+  label: Work (Português)
+  create: documents
+  match: "**/*"
+  new_doc_ext: ".md"
+  templates:
+  - portfolio
+- type: directory
   path: _i18n/en
   label: Pages (English)
   create: documents
