@@ -1,0 +1,34 @@
+---
+label: Portfólio
+hide_body: false
+fields:
+- type: text
+  name: layout
+  label: layout
+- type: text
+  name: title
+  label: title
+- type: textarea
+  name: description
+  label: description
+- type: text
+  name: tag
+  label: tag
+- type: datetime
+  name: date
+  label: date
+- type: file
+  name: background
+  label: background
+- type: file
+  name: thumbnail
+  label: thumbnail
+- type: text
+  name: lang
+  label: lang
+- type: text
+  name: lang-ref
+  label: lang-ref
+- type: boolean
+  name: featured
+  label: featured
