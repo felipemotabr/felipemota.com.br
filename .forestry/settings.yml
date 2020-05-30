@@ -6,7 +6,7 @@ webhook_url:
 sections:
 - type: directory
   path: _i18n/pt
-  label: Português  - Works
+  label: " Pages (Português)"
   create: all
   match: "**/*"
   templates:
@@ -14,7 +14,7 @@ sections:
 - type: jekyll-pages
   label: Pages
   create: documents
-  new_doc_ext: ".md"
+  new_doc_ext: md
 - type: jekyll-posts
   label: Posts
   create: all
