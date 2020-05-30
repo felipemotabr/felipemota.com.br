@@ -3,7 +3,7 @@ layout: post
 title: A digital studio crafting beautiful experiences
 description: Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since. Lorem Ipsum has been the industry. Lorem Ipsum is simply dummy text of the printing and industry.
 tag: design
-date: 2020-05-11 10:45:13 -0400
+date: 2018-01-01 10:45:13 -0400
 background: '/img/posts/06.jpg'
 thumbnail: 'http://www.themezaa.com/html/pofo/images/homepage-option15-image-6.jpg'
 lang: en

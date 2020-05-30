@@ -16,8 +16,8 @@ layout: default
       <div class="row">
         <div class="col-lg-8 col-md-10 mx-auto">
           <div class="page-heading">
-            <h1>{{ site.header_title }}</h1>
-            <span class="subheading">{{ site.header_description }}</span>
+            <h1>{% t header.title %}</h1>
+            <span class="subheading">{% t header.description %}</span>
           </div>
         </div>
       </div>
@@ -30,7 +30,7 @@ layout: default
   <div class="container">
     <div class="row">
       <div class="col-lg-6">
-        <h5>Recent Post</h5>
+        <h5>{% translate recent-section.post %}</h5>
         {% for post in site.posts limit : 1 %}
         <a href="{{ post.url }}">
         <div class="recent__content">
@@ -45,7 +45,7 @@ layout: default
         {% endfor %}
       </div>
       <div class="col-lg-6">
-        <h5>Recent Work</h5>
+        <h5>{% translate recent-section.work %}</h5>
         {% for post in site.works limit : 1 %}
         <a href="{{ post.url }}">
         <div class="recent__content">
@@ -69,21 +69,23 @@ layout: default
     <div class="container">
       <div class="row">
         <div class="col-lg-12">
-          <h2>Work</h2>
-          <p>Lorem Ipsum is simply dummy text of the printing and typesetting industry.</p>
+          <h2>{% translate work-section.title %}</h2>
+          <p>{% translate work-section.description %}</p>
         </div>
         {% for preview_work in site.works limit : 5 %}
-        <div class="row work__content">
-          <div class="col-12 col-lg-7">
-            <img src="{{ preview_work.thumbnail }}"class="img-fluid" alt="">
+          {% if preview_work.featured == true %}
+          <div class="row work__content">
+            <div class="col-12 col-lg-7">
+              <img src="{{ preview_work.thumbnail }}"class="img-fluid" alt="">
+            </div>
+            <div class="col-12 col-lg-5">
+                <span class="work__tag">{{ preview_work.tag }}</span>
+                <h4 class="work__title">{{ preview_work.title }}</h4>
+                <p class="work__description">{{ preview_work.description }}</p>
+                <a href="{{ preview_work.url | prepend: site.baseurl | replace: '//', '/' }}" class="btn btn-primary">{% translate work-section.btn %}</a>
+            </div>
           </div>
-          <div class="col-12 col-lg-5">
-              <span class="work__tag">{{ preview_work.tag }}</span>
-              <h4 class="work__title">{{ preview_work.title }}</h4>
-              <p class="work__description">{{ preview_work.description }}</p>
-              <a href="{{ preview_work.url | prepend: site.baseurl | replace: '//', '/' }}" class="btn btn-primary">Read more</a>
-          </div>
-        </div>
+          {% endif %}
         {% endfor %}
     </div>
   </div>

@@ -1,0 +1,1 @@
+Vamos falar das suas ideias. Entre em contato comigo pelas minhas redes sociais. Ou se preferir, usando o formulário de contato abaixo.

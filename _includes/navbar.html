@@ -8,21 +8,50 @@
     </button>
     <div class="collapse navbar-collapse" id="navbarResponsive">
       <ul class="navbar-nav ml-auto">
+
+
+        <!-- {% for menu in site.data.menu %}
+
         <li class="nav-item">
-          <a class="nav-link" href="{{"/" | relative_url }}">Home</a>
+          <a class="nav-link" href="{{ menu.slug }}">{{ menu.title }}</a>
         </li>
-        <li class="nav-item">
-          <a class="nav-link" href="{{"/about" | relative_url }}">About</a>
-        </li>
+        {% endfor %}  -->
+
+        <style>
+          .dropdown-menu-right { 
+            right: 0; 
+            left: auto; 
+        }
+        </style>
+
+        {% if site.lang == "en" %}
+          {% for link in site.data.menu_en %}
+          <li class="nav-item">
+            <a class="nav-link" href="{{ link.slug | absolute_url }}">{{ link.title }}</a>
+          </li>
+          {% endfor %} 
+        {% elsif site.lang == "pt" %}
+          {% for link in site.data.menu_pt %}
+          <li class="nav-item">
+            <a class="nav-link" href="{{ link.slug | absolute_url }}">{{ link.title }}</a>
+          </li>
+          {% endfor %}
+        {% endif %}
+          <!-- Dropdown -->
+          <li class="nav-item dropdown">
+            <a class="nav-link dropdown-toggle" href="#" id="navbardrop" data-toggle="dropdown">
+              {{ site.lang }}
+            </a>
+            <div class="dropdown-menu dropdown-menu-right  text-center">
+              <a class="dropdown-item" href="{{ "/en" | prepend: site.baseurl_root }}">EN</a>
+              <a class="dropdown-item" href="{{ "/" | prepend: site.baseurl_root }}">PT</a>
+            </div>
+          </li>
+
         <!-- <li class="nav-item">
           <a class="nav-link" href="{{ "/posts" | relative_url }}">Posts</a>
         </li> -->
-        <li class="nav-item">
-          <a class="nav-link" href="{{ "/works" | relative_url }}">Work</a>
-        </li>
-        <li class="nav-item">
-          <a class="nav-link" href="{{"/contact" | relative_url }}">Contact</a>
-        </li>
+
       </ul>
     </div>
 </nav>
