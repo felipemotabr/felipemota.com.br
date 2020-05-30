@@ -4,6 +4,13 @@ auto_deploy: false
 admin_path: ''
 webhook_url: 
 sections:
+- type: directory
+  path: _i18n/pt
+  label: Português  - Works
+  create: all
+  match: "**/*"
+  templates:
+  - pagina
 - type: jekyll-pages
   label: Pages
   create: all
